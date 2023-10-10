@@ -1,0 +1,177 @@
+*{
+    Padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none; 
+    }
+     
+    
+    body{
+        
+        background: var(--bgcolor--);
+        color: var(--text-color);
+        overflow-x: hidden;
+    }
+    .header-container {
+        background-color: white; /* Setting the background color for the container */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a shadow to the container */
+        position: fixed;
+
+        width: 100%;
+        z-index: 100;
+    }
+    
+    
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 100px;
+       
+    }
+    
+    .logo{
+        color: #000000;
+        font-size: 2em;
+        cursor: default;
+        
+    }
+    .logo span {
+        color: #0e47cb;
+
+    }
+    .navigation {
+        margin-left: -300px;
+    }
+    
+    .navigation a{
+        font-size: 1.1em;
+        font-weight: 500;
+        color: #000000;
+        margin-right: 40px;
+        text-decoration: none;
+        transition: .3s;
+    }
+    .navigation a:hover{
+        color: #72ade8;
+    }
+    
+    /* Styling the fun segment */
+.about-me {
+    padding: 50px;
+    
+}
+
+.fun-segment {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow for the fun segment */
+    margin-top: 60px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+.quote {
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+.quote p {
+    font-size: 1.2em;
+    color: #555; 
+    font-style: italic;
+}
+
+.education {
+    padding: 50px;
+}
+
+
+.education-box {
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    margin-top: 30px; 
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+th {
+    background-color:  #0e47cb;
+    color: white;
+}
+/* Media query for screens 768px and above (tablet and desktop) */
+@media (min-width: 768px) {
+    header {
+        padding: 30px 100px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .navigation {
+        display: flex;
+        margin-left: 0;
+    }
+}
+/* Media query for screens up to 767px (mobile) */
+@media (max-width: 767px) {
+    header {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 101;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navigation.open {
+        transform: translateX(0);
+    }
+
+    .navigation a {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+}

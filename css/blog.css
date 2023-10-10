@@ -1,0 +1,261 @@
+* {
+    Padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+
+    background: var(--bgcolor--);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.header-container {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Add a shadow to the container */
+    /* position: fixed; */
+    width: 100%;
+    z-index: 100;
+
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+
+}
+
+.logo {
+    color: #000000;
+    font-size: 2em;
+    cursor: default;
+
+}
+
+.logo span {
+    color: #0e47cb;
+
+}
+
+.navigation {
+    margin-left: -300px;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #000000;
+    margin-right: 40px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    color: #72ade8;
+}
+
+.content-box {
+    padding: 50px;
+}
+.content-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-top: 60px;
+}
+
+/* Styling for headings and paragraphs */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Styling for the heart symbol */
+.heart {
+    color: #ff0000;
+}
+.journal-box {
+    padding:50px;
+}
+/* Styling for the second box */
+.journal-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 60px;
+}
+
+/* Styling for headings and paragraphs within the second box */
+.journal-box h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.journal-box p {
+    font-size: 16px;
+    color: #666;
+}
+/* Media query for tablet screens */
+@media (min-width: 768px) {
+    header {
+        padding: 30px 100px; 
+    }
+
+    .logo {
+        font-size: 2em; 
+    }
+
+    .navigation {
+        display: flex; 
+        flex-direction: row;
+    }
+
+    .navigation a {
+        font-size: 1.1em; 
+        margin-right: 40px; 
+    }
+
+    .content-box {
+        padding: 50px; 
+    }
+
+    h1 {
+        font-size: 24px; 
+    }
+
+    p {
+        font-size: 16px; 
+    }
+
+    .journal-box {
+        padding: 50px; 
+    }
+
+    .journal-box h2 {
+        font-size: 24px;
+    }
+
+    .journal-box p {
+        font-size: 16px; 
+    }
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1024px) {
+    header {
+        padding: 30px 100px;
+    }
+
+    .logo {
+        font-size: 2em; 
+    }
+
+    .navigation {
+        margin-left: -300px;
+    }
+
+    .navigation a {
+        font-size: 1.1em;
+        margin-right: 40px;
+    }
+
+    .content-box {
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .journal-box {
+        padding: 50px;
+    }
+
+    .journal-box h2 {
+        font-size: 24px;
+    }
+
+    .journal-box p {
+        font-size: 16px;
+    }
+}
+/* Media query for screens up to 767px (mobile) */
+@media (max-width: 767px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 101;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navigation.open {
+        transform: translateX(0);
+    }
+
+    .navigation a {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .content-box {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .journal-box {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .journal-box h2 {
+        font-size: 18px;
+    }
+
+    .journal-box p {
+        font-size: 12px;
+    }
+}

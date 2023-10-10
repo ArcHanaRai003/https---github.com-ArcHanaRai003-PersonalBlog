@@ -1,0 +1,302 @@
+* {
+    Padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.header-container {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+
+}
+
+.logo {
+    color: #000000;
+    font-size: 2em;
+    cursor: default;
+
+}
+
+.logo span {
+    color: #0e47cb;
+
+}
+
+.navigation {
+    margin-left: -300px;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #000000;
+    margin-right: 40px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    color: #72ade8;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(1696515350501.jpg)left center;
+    background-repeat: no-repeat;
+    /*this helped me in not reapeating the picture i learned about it lately*/
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+
+}
+
+
+
+.content {
+    max-width: 500px;
+    color: #000000
+}
+
+.content h2 {
+    font-size: 3em;
+}
+
+.content h2 span {
+    color: #0e47cb;
+}
+
+.content h4 {
+    font-size: 2em;
+}
+
+h4 {
+    margin-bottom: 10%;
+}
+
+p {
+    margin-bottom: 15%;
+    /*  setting the desired gap */
+}
+
+.content {
+    max-width: 250%;
+    color: #000000;
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    width: 35%;
+}
+
+.btn-group a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 50px;
+    background: #0e47cb;
+    border-radius: 10px;
+    border: 2px solid #0e47cb;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-group a:hover:nth-child(1) {
+    color: #0e47cb;
+    background: transparent;
+    margin-left: 30px;
+    padding: 10px 30px;
+}
+
+
+.btn-group a:nth-child(2) {
+    color: #0e47cb;
+    background: transparent;
+    margin-left: 30px;
+    padding: 10px 30px;
+}
+
+.btn-group a:hover:nth-child(2) {
+    color: #fff;
+    background: #0e47cb;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 70px;
+}
+
+/*As for social icons i put the link to my github  account but i didn't link my facebook and insta account*/
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #000000;
+    border-radius: 50%;
+    margin-right: 22px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #121213;
+    ;
+    outline: 2px solid #000000;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    transform: translate(-6px);
+}
+/* Media query for screens 768px and above (tablet and desktop) */
+@media (min-width: 768px) {
+    .home {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header-container {
+        position: fixed;
+    }
+
+    header {
+        padding: 30px 100px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .navigation {
+        margin-left: -300px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .home {
+        padding: 30px 100px;
+    }
+
+    .content {
+        max-width: 500px;
+        text-align: left;
+    }
+
+    .content h2 {
+        font-size: 3em;
+    }
+
+    .content h4 {
+        font-size: 2em;
+    }
+
+    .social-icons {
+        bottom: 70px;
+    }
+
+    .social-icons a {
+        margin-right: 22px;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+/* Media query for screens up to 767px (mobile) */
+@media (max-width: 767px) {
+    .home {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header-container {
+        position: fixed;
+    }
+
+    header {
+        padding: 30px 100px;
+    }
+    
+    .logo {
+        font-size: 1em; 
+    }
+    .navigation {
+        margin-left: -300px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+
+    .navigation.open {
+        transform: translateX(0); 
+    }
+
+    .menu-button {
+        display: block; 
+        font-size: 1.5em;
+        cursor: pointer;
+        z-index: 102; 
+    }
+
+    .home {
+        padding: 20px; 
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center; 
+    }
+
+    .content h2 {
+        font-size: 2em; 
+    }
+
+    .content h4 {
+        font-size: 1.5em; 
+    }
+
+    .social-icons {
+        bottom: 20px; 
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        justify-content: center;
+
+    }
+}
+
